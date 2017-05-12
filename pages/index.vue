@@ -1,33 +1,35 @@
 <template>
-  <v-app id="example-2" left-fixed-sidebar>
-  <v-toolbar>
-    <v-toolbar-side-icon @click.native.stop="nav2 = !nav2" />
-    <v-toolbar-logo>Toolbar</v-toolbar-logo>
-  </v-toolbar>
-  <main>
-    <v-sidebar left fixed drawer v-model="nav2">
-      <v-list>
-        <v-list-item v-for="i in 3" :key="i">
-          <v-list-tile>
-            <v-list-tile-title>Item {{ i }}</v-list-tile-title>
-          </v-list-tile>
-        </v-list-item>
-      </v-list>
-    </v-sidebar>
-    <v-content>
+  <v-card class="grey lighten-4 elevation-0">
+    <v-card-text>
       <v-container fluid>
-        <div class="title">Main Content</div>
+        <v-row>
+          <v-col xs6>
+            <v-subheader v-text="'나이'" />
+          </v-col>
+          <v-col xs6>
+            <v-select
+              v-bind:items="states"
+              v-model="e1"
+              label="나이를 선택해 주세요"
+              light
+              single-line
+              auto
+            />
+          </v-col>
+        </v-row>
       </v-container>
-    </v-content>
-  </main>
-</v-app>
+    </v-card-text>
+  </v-card>
 </template>
 
 <script>
 export default {
   data () {
     return {
-      nav2: false
+      states: [
+        { age: 1 },
+        { age: 2 }
+      ]
     }
   }
 }
