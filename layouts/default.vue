@@ -1,12 +1,12 @@
 <template>
-  <div>
+  <v-app id="gnb" left-fixed-sidebar>
     <Navbar/>
     <nuxt/>
-  </div>
+  </v-app>
 </template>
 
 <script>
-import Navbar from '~components/Navbar.vue'
+import Navbar from '~components/Nav/Navbar.vue'
 
 export default {
   components: {
