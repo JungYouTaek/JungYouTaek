@@ -1,8 +1,10 @@
 <template>
-  <v-app id="gnb" left-fixed-sidebar>
+  <v-app>
     <Navbar/>
-    <nuxt/>
-    <Foot/>
+    <v-content>
+      <nuxt/>
+      <Foot/>
+    </v-content>
   </v-app>
 </template>
 

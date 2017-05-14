@@ -1,5 +1,5 @@
 <template lang="html">
-  <v-container>
+  <v-container fluid>
   <v-stepper v-model="e1">
   <v-stepper-header>
     <v-stepper-step step="1" v-bind:complete="e1 > 1">프로필 입력</v-stepper-step>
@@ -28,7 +28,7 @@
   <v-stepper-content step="3">
     <v-card class="lighten-1 z-depth-1 mb-5" height="400px">
       <v-card-text>
-        <div>{{ card_text }}</div>
+        <div></div>
       </v-card-text>
     </v-card>
     <v-btn class="light-green" @click.native="submit">제출</v-btn>

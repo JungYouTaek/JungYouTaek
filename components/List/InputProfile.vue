@@ -9,7 +9,6 @@
         <v-col xs6>
           <v-select
             v-bind:items="gender"
-            v-model="e1"
             label="성별"
             light
             single-line
@@ -22,7 +21,6 @@
         <v-col xs6>
           <v-select
             v-bind:items="age"
-            v-model="e1"
             label="연령대"
             light
             single-line
@@ -35,7 +33,6 @@
         <v-col xs6>
           <v-select
             v-bind:items="activity"
-            v-model="e1"
             label="일일 활동량"
             light
             single-line
@@ -47,6 +44,7 @@
         </v-col>
         <v-col xs6>
           <v-text-field
+            type="number"
             name="weight"
             label="몸무게(숫자만)"
           ></v-text-field>
