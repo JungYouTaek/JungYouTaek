@@ -4,15 +4,9 @@
       <v-toolbar-side-icon @click.native.stop="sidebar = !sidebar" />
       <v-toolbar-title class="hidden-xs-only"><a href="/">영양만점</a></v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-btn icon dark>
-        <v-icon>account_circle</v-icon>
-      </v-btn>
-      <v-btn icon dark>
-        <v-icon>favorite</v-icon>
-      </v-btn>
-      <v-btn icon dark>
-        <v-icon>more_vert</v-icon>
-      </v-btn>
+      <v-toolbar-item href="https://github.com/JungYouTaek/nuxt-practice" ripple><img src="/github.svg" alt="github-logo"></v-toolbar-item>
+      <v-toolbar-item href="/contact" ripple><img src="/speech-bubble.svg" alt="contact us"></v-toolbar-item>
+      <v-toolbar-item ripple>Link</v-toolbar-item>
     </v-toolbar>
     <v-sidebar v-model="sidebar" left fixed>
       <v-list two-line>
@@ -45,7 +39,7 @@ export default {
         { header: '메뉴' },
         { avatar: '/home.svg', title: 'Home', subtitle: '홈으로 가기', link: '/' },
         { divider: true, inset: true },
-        { avatar: '/check.svg', title: 'Check', subtitle: '검사하기' },
+        { avatar: '/check.svg', title: 'Check', subtitle: '검사하기', link: '/check' },
         { divider: true, inset: true },
         { avatar: '/about.svg', title: 'About', subtitle: '페이지 설명', link: '/about' }
       ]
@@ -54,7 +48,7 @@ export default {
 }
 </script>
 
-<style lang="css">
+<style lang="css" scoped>
 a {
   text-decoration: none;
   color: white
@@ -65,5 +59,8 @@ a:hover {
 }
 a:not(:hover) {
   transition: 0.3s
+}
+li {
+  list-style: none;
 }
 </style>
