@@ -4,23 +4,27 @@
       <v-toolbar-side-icon @click.native.stop="sidebar = !sidebar" />
       <v-toolbar-title class="hidden-xs-only"><a href="/">영양만점</a></v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-btn icon dark>
-        <v-icon>account_circle</v-icon>
-      </v-btn>
-      <v-btn icon dark>
-        <v-icon>favorite</v-icon>
-      </v-btn>
-      <v-btn icon dark>
-        <v-icon>more_vert</v-icon>
-      </v-btn>
+      <v-toolbar-item href="https://github.com/JungYouTaek/nuxt-practice" ripple><img src="/github.svg" alt="github-logo"></v-toolbar-item>
+      <v-toolbar-item href="/contact" ripple><img src="/speech-bubble.svg" alt="contact us"></v-toolbar-item>
+      <v-toolbar-item ripple>Link</v-toolbar-item>
     </v-toolbar>
     <v-sidebar v-model="sidebar" left fixed>
-      <v-list>
-        <v-list-item v-for="list in lists" :key="list.id">
-          <v-list-tile>
-            <v-list-tile-title>{{ list.name }}</v-list-tile-title>
-          </v-list-tile>
-        </v-list-item>
+      <v-list two-line>
+        <template v-for="list in lists.slice(0, 6)">
+          <v-subheader v-if="list.header" v-text="list.header" />
+          <v-divider v-else-if="list.divider" v-bind:inset="list.inset" />
+          <v-list-item v-else v-bind:key="list.title">
+            <v-list-tile avatar :href="list.link">
+              <v-list-tile-avatar>
+                <img v-bind:src="list.avatar" />
+              </v-list-tile-avatar>
+              <v-list-tile-content>
+                <v-list-tile-title v-html="list.title" />
+                <v-list-tile-sub-title v-html="list.subtitle" />
+              </v-list-tile-content>
+            </v-list-tile>
+          </v-list-item>
+        </template>
       </v-list>
     </v-sidebar>
   </nav>
@@ -30,18 +34,21 @@
 export default {
   data () {
     return {
-      sidebar: true,
+      sidebar: false,
       lists: [
-        { name: '홈페이지 소개' },
-        { name: '테스트 해보기' },
-        { name: '개인정보' }
+        { header: '메뉴' },
+        { avatar: '/home.svg', title: 'Home', subtitle: '홈으로 가기', link: '/' },
+        { divider: true, inset: true },
+        { avatar: '/check.svg', title: 'Check', subtitle: '검사하기', link: '/check' },
+        { divider: true, inset: true },
+        { avatar: '/about.svg', title: 'About', subtitle: '페이지 설명', link: '/about' }
       ]
     }
   }
 }
 </script>
 
-<style lang="css">
+<style lang="css" scoped>
 a {
   text-decoration: none;
   color: white
@@ -52,5 +59,8 @@ a:hover {
 }
 a:not(:hover) {
   transition: 0.3s
+}
+li {
+  list-style: none;
 }
 </style>
