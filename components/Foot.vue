@@ -1,6 +1,6 @@
 <template>
   <v-footer class="light-green">
-    만든이 : 정유택, 박상민
+    <p>Copyright &copy; by Youtaek Jung, Sangmin Park</p>
   </v-footer>
 </template>
 
@@ -10,4 +10,7 @@ export default {
 </script>
 
 <style lang="css">
+  footer {
+    text-align: center;
+  }
 </style>
