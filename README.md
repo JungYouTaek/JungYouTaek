@@ -1,22 +1,60 @@
-# nuxt-practice
+#Nuxt 두번째 프로젝트
 
-> Nuxt.js project
+같이 개발공부하는 친구와 Vue 기본내용을 훑고 프로젝트 시작해보자 해서 백엔드를 모르지만 Nuxt가 그렇게 좋다라는 소리를 들어서 일단 시작하기로 했음.
+어떤 서비스를 만들어볼까 고민하다가 아래와 같이 결정했음. 상용화는 힘들겠지만 중간에 포기안하고 끝까지 만드는게 목표!
 
-## Build Setup
+##Blog
+[JungYoutaek](http://takeuu.tistory.com) 유택 블로그
+[ParkSangmin](http://Sangminnn.tistory.com) 상민 블로그
 
-``` bash
-# install dependencies
-$ npm install # Or yarn install
+##목표
 
-# serve with hot reload at localhost:3000
-$ npm run dev
+일반인들이 한끼 또는 하루에 섭취한 음식을 입력해 영양소 섭취량을 쉽게 체크 및 솔루션 제공
 
-# build for production and launch server
-$ npm run build
-$ npm start
+프로젝트 이름은 미정
 
-# generate static project
-$ npm run generate
-```
+##개발스택
 
-For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).
+###Vue + Nuxt + Vuetify
+
+[Vue 홈페이지](https://kr.vuejs.org/)
+[Nuxt 홈페이지](https://ko.nuxtjs.org/)
+[Vuetify 홈페이지](https://vuetifyjs.com/)
+[프로젝트 github 주소](https://github.com/JungYouTaek/nuxt-practice)
+
+##기능
+
+####1.0
+네비바 - 페이지이름(홈버튼), 마이페이지, 회원가입
+페이지 - 입력페이지, 출력페이지, 회원가입, 로그인, 소개, 개인정보, 입력기록
+푸터
+
+##진행과정
+
+####2017.05.10
+
+프로젝트 계획 및 nuxt starter로 프로젝트 생성.
+생성까지는 알겠는데 만들고보니 프로젝트 구조와 동작원리를 잘 모르겠어서 nuxt 공식문서 다시 읽음
+
+헷갈리던 부분:
+전역 CSS 설정, 라이브러리 적용, 미들웨어의 정의, axios가 무엇인가
+
+####2017.05.11
+
+CSS 라이브러리를 찾던중에 만드려는 사이트와 맞겠다 싶어 Vuetify를 적용하려 했음.
+config에 css파일은 적용했는데 js를 추가해야 사이드바가 클릭하면 작동을하는데 어떻게 js파일을 추가하는지 몰라서 삽질 무한반복 후 접음
+
+####2017.05.12
+
+열심히 구글링 중에 깃헙에 예제코드로 올라와 있는걸 보고 따라하니 기적같이 성공! [참고한링크](https://github.com/nuxt/nuxt.js/pull/384/files)
+어떤 기능을 넣어야할지 설계를 해놓고 시작한게 아니라 영양사인 여자친구의 자문을 구해 필요한 기능들을 하나씩 적음
+
+####2017.05.14
+
+사이드바 내용 추가, 설문 두번째 페이지 레이아웃 구성 / 색상이 안바껴서 질문 올려놓고 수정은 못한 상태.
+소셜 로그인 기능 추가하려하는데 어떤걸 사용해야 할지 모르겠음.
+데이터베이스 관리 방법? >> 알아봐야함
+
+####2017.05.15
+
+상단바 깃헙주소와 contact페이지 만드는데 Grid사용, 레이아웃 특히 버튼이 자꾸 뭉개지는데 미디어쿼리로 다시 손봐야할 필요가 있지만, 우선은 틀만 잡아놓고 메일전송기능 알아보는중
