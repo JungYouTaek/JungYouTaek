@@ -13,7 +13,6 @@
 
 <script>
 export default {
-<<<<<<< HEAD
   data () {
     return {
       sidebar: false,
