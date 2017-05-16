@@ -4,8 +4,8 @@
 어떤 서비스를 만들어볼까 고민하다가 아래와 같이 결정했음. 상용화는 힘들겠지만 중간에 포기안하고 끝까지 만드는게 목표!
 
 ## 프로젝트 팀원
-[JungYoutaek](http://takeuu.tistory.com) 유택 블로그
-[ParkSangmin](http://Sangminnn.tistory.com) 상민 블로그
+- [JungYoutaek](http://takeuu.tistory.com) 유택 블로그
+- [ParkSangmin](http://Sangminnn.tistory.com) 상민 블로그
 
 ## 목표
 
@@ -17,10 +17,10 @@
 
 ### Vue + Nuxt + Vuetify
 
-[Vue 홈페이지](https://kr.vuejs.org/)
-[Nuxt 홈페이지](https://ko.nuxtjs.org/)
-[Vuetify 홈페이지](https://vuetifyjs.com/)
-[프로젝트 github 주소](https://github.com/JungYouTaek/nuxt-practice)
+- [Vue 홈페이지](https://kr.vuejs.org/)
+- [Nuxt 홈페이지](https://ko.nuxtjs.org/)
+- [Vuetify 홈페이지](https://vuetifyjs.com/)
+- [프로젝트 github 주소](https://github.com/JungYouTaek/nuxt-practice)
 
 ## 기능
 
@@ -96,3 +96,22 @@
 #### 미해결
 - Grid 이해 / 버튼 배치
 - 뷰포트에 따른 높이(index페이지) 미디어쿼리 또는 다른 CSS 기법 모색
+
+### 2017.05.16
+
+#### 진헹과정
+- 네비바 버튼한개 수정
+- 인덱스 페이지 opacity 설정(05.17 해결)
+
+#### 미헤결
+- carousel 위에 내용 추가하는 방법
+
+### 2017.05.17
+
+#### 진행과정
+- index페이지 carousel 투명도 설정
+- carousel 안의 내용 투명도 적용 제외(position으로 설정)
+- index페이지 레이아웃 구성 완료 / 버튼 링크(`:router="true" to="/check"`)
+
+#### 미해결
+- 
