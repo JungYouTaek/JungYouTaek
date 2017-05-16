@@ -9,8 +9,7 @@ export default {
   data () {
     return {
       items: [
-        { src: 'about.svg' },
-        { src: 'check.svg' }
+        { src: 'diet3.jpg' }
       ]
     }
   }
@@ -21,6 +20,9 @@ export default {
   .carousel {
     width: 100%;
     height: 600px;
+  }
+  .carousel__item {
+    opacity: 0.7;
   }
   @media (max-width: 400px) {
     .carousel {
