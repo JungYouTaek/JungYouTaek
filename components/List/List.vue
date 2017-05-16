@@ -22,17 +22,16 @@
         <Input-diet/>
       </v-card-text>
     </v-card>
-    <v-btn class="light-green" @click.native="e1 = 3">계속</v-btn>
+    <v-btn class="light-green" @click.native="e1 = 3">제출</v-btn>
     <v-btn flat @click.native="e1 = 1">뒤로가기</v-btn>
   </v-stepper-content>
   <v-stepper-content step="3">
     <v-card class="lighten-1 z-depth-1 mb-5" height="400px">
       <v-card-text>
-        <div></div>
+        <Result/>
       </v-card-text>
     </v-card>
-    <v-btn class="light-green" @click.native="submit">제출</v-btn>
-    <v-btn flat @click.native="e1 = 2">뒤로가기</v-btn>
+    <v-btn class="light-green" @click.native="e1 = 1">다시검사하기</v-btn>
   </v-stepper-content>
 </v-stepper>
 </v-container>
@@ -41,6 +40,7 @@
 <script>
 import InputProfile from '~components/List/InputProfile.vue'
 import InputDiet from '~components/List/InputDiet.vue'
+import Result from '~components/List/Result.vue'
 
 export default {
   data () {
@@ -50,7 +50,8 @@ export default {
   },
   components: {
     InputProfile,
-    InputDiet
+    InputDiet,
+    Result
   }
 }
 </script>
