@@ -1,6 +1,6 @@
 <template lang="html">
   <v-carousel icon="remove">
-    <v-carousel-item v-for="(item,i) in items" v-bind:src="item.src" :key="i" />
+    <v-carousel-item v-for="item in items" v-bind:src="item.src" />
   </v-carousel>
 </template>
 
