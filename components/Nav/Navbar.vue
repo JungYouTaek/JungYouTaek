@@ -37,7 +37,7 @@ export default {
       sidebar: false,
       lists: [
         { header: '메뉴' },
-        { avatar: '/home.svg', title: 'Home', subtitle: '홈으로 가기', link: '/' },
+        { avatar: '/home.svg', title: 'Home', subtitle: '홈으로 가기', link: '/Home' },
         { divider: true, inset: true },
         { avatar: '/check.svg', title: 'Check', subtitle: '검사하기', link: '/check' },
         { divider: true, inset: true },
