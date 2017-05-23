@@ -1,58 +1,61 @@
 <template lang="html">
   <v-card class="lighten-4 elevation-0">
-  <v-card-text>
-    <v-container fluid>
-      <v-row>
-        <v-col xs6>
-          <v-subheader v-text="'성별'" />
-        </v-col>
-        <v-col xs6>
-          <v-select
+    <v-card-text>
+      <v-container fluid>
+        <v-row>
+          <v-col xs6>
+            <v-subheader v-text="'성별'" />
+          </v-col>
+          <v-col xs6>
+            <v-select
             v-bind:items="gender"
             label="성별"
+            name="gender"
             light
             single-line
             auto
-          />
-        </v-col>
-        <v-col xs6>
-          <v-subheader v-text="'연령대'" />
-        </v-col>
-        <v-col xs6>
-          <v-select
+            />
+          </v-col>
+          <v-col xs6>
+            <v-subheader v-text="'연령대'" />
+          </v-col>
+          <v-col xs6>
+            <v-select
             v-bind:items="age"
             label="연령대"
+            name="age"
             light
             single-line
             auto
-          />
-        </v-col>
-        <v-col xs6>
-          <v-subheader v-text="'일일 활동량'" />
-        </v-col>
-        <v-col xs6>
-          <v-select
+            />
+          </v-col>
+          <v-col xs6>
+            <v-subheader v-text="'일일 활동량'" />
+          </v-col>
+          <v-col xs6>
+            <v-select
             v-bind:items="activity"
             label="일일 활동량"
+            name="activity"
             light
             single-line
             auto
-          />
-        </v-col>
-        <v-col xs6>
-          <v-subheader v-text="'몸무게'"></v-subheader>
-        </v-col>
-        <v-col xs6>
-          <v-text-field
+            />
+          </v-col>
+          <v-col xs6>
+            <v-subheader v-text="'몸무게'"></v-subheader>
+          </v-col>
+          <v-col xs6>
+            <v-text-field
             type="number"
             name="weight"
             label="몸무게(숫자만)"
-          ></v-text-field>
-        </v-col>
-      </v-row>
-    </v-container>
-  </v-card-text>
-</v-card>
+            ></v-text-field>
+          </v-col>
+        </v-row>
+      </v-container>
+    </v-card-text>
+  </v-card>
 </template>
 
 <script>

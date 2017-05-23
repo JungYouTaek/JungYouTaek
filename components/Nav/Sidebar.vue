@@ -1,5 +1,5 @@
 <template>
-  <v-sidebar v-model="isActive" left mobile fixed>
+  <v-navigation-drawer v-model="isActive" temporary>
     <v-list two-line>
       <template v-for="list in lists.slice(0, 6)">
         <v-subheader v-if="list.header" v-text="list.header" />
@@ -17,7 +17,7 @@
         </v-list-item>
       </template>
     </v-list>
-  </v-sidebar>
+  </v-navigation-drawer>
 </template>
 
 <script>
@@ -39,7 +39,6 @@ export default {
     isActive () {
       this.$store.commit('vuetify/SIDEBAR', this.isActive)
     },
-
     '$store.state.sidebar' (sidebar) {
       this.isActive = sidebar
     }
