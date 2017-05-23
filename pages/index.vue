@@ -1,13 +1,12 @@
 <template lang="html">
   <v-carousel icon="remove">
-    <v-carousel-item v-for="item in items" v-bind:src="item.src">
+    <v-carousel-item v-for="item in items" :key="item" v-bind:src="item.src">
       <div>
         <h1>오늘의 식단을 체크해보세요</h1>
         <v-btn class="btn" light flat :router="true" to="/check">검사하기</v-btn>
       </div>
     </v-carousel-item>
   </v-carousel>
-
 </template>
 
 <script>
@@ -25,7 +24,7 @@ export default {
 
 <style lang="css" scoped>
 .carousel__right, .carousel__left {
-  display: none;
+  display: none !important;
 }
 .carousel {
   width: 100%;
