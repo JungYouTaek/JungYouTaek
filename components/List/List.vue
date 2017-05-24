@@ -13,7 +13,7 @@
           <Input-profile/>
         </v-card-text>
       </v-card>
-      <v-btn class="light-green" @click.native="check">계속</v-btn>
+      <v-btn class="light-green" @click.native="e1 = 2">계속</v-btn>
     </v-stepper-content>
     <v-stepper-content step="2">
       <v-card class="lighten-1 z-depth-1 mb-5" height="450px">
@@ -43,7 +43,7 @@ import Result from '~components/List/Result.vue'
 export default {
   data () {
     return {
-      e1: 1
+      e1: 0
     }
   },
   components: {

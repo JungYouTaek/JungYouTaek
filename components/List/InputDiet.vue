@@ -1,21 +1,31 @@
 <template lang="html">
-  <v-tabs id="mobile-tabs-3" centered scroll-bars>
-    <v-tab-item
-      v-for="food in foods" :key="food.id"
-      v-bind:href="'#mobile-tabs-3-' + food.id"
-      slot="activators"
+  <v-tabs
+    id="mobile-tabs-1"
+    grow
+    scroll-bars
+    v-model="active"
+    light
+  >
+    <v-tabs-bar slot="activators">
+      <v-tabs-item
+        v-for="food in foods"
+        :key="food.id"
+        :href="'#mobile-tabs-1-' + food.id"
+        ripple
+      >
+        {{ food.name }}
+      </v-tabs-item>
+      <v-tabs-slider></v-tabs-slider>
+    </v-tabs-bar>
+    <v-tabs-content
+      v-for="food in foods"
+      :key="food.id"
+      :id="'mobile-tabs-1-' + food.id"
     >
-      {{ food.name }}
-    </v-tab-item>
-    <v-tab-content
-      v-for="food in foods" :key="food.id"
-      v-bind:id="'mobile-tabs-3-' + food.id"
-      slot="content"
-    >
-      <v-card>
+      <v-card flat>
         <v-card-text>{{ food.option }}</v-card-text>
       </v-card>
-    </v-tab-content>
+    </v-tabs-content>
   </v-tabs>
 </template>
 
@@ -23,9 +33,10 @@
 export default {
   data () {
     return {
+      active: null,
       foods: [
-        { id: 1, name: '밥', option: 'menu' },
-        { id: 2, name: '빵', option: 'menu2' }
+        { id: 1, name: '밥', option: '하이' },
+        { id: 2, name: '빵', option: '헬로' }
       ]
     }
   }

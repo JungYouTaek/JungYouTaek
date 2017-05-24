@@ -9,7 +9,6 @@
           <v-flex xs6>
             <v-select
               v-bind:items="gender"
-              v-model="e1"
               label="성별"
               dark
               single-line
@@ -22,7 +21,6 @@
           <v-flex xs6>
             <v-select
               v-bind:items="age"
-              v-model="e1"
               label="나이"
               dark
               single-line
@@ -35,19 +33,19 @@
           <v-flex xs6>
             <v-select
               v-bind:items="activity"
-              v-model="e1"
               label="일일 활동량"
               dark
               single-line
               auto
             ></v-select>
           </v-flex>
-          <v-flex xs4>
+          <v-flex xs6>
             <v-subheader>몸무게</v-subheader>
           </v-flex>
-          <v-flex xs8>
+          <v-flex xs6>
             <v-text-field
               name="weight"
+              type="number"
               label="몸무게"
             ></v-text-field>
           </v-flex>
