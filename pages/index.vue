@@ -23,9 +23,6 @@ export default {
 </script>
 
 <style lang="css" scoped>
-.carousel__right, .carousel__left {
-  display: none !important;
-}
 .carousel {
   width: 100%;
   height: 600px;
