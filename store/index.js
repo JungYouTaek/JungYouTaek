@@ -32,6 +32,5 @@ export default new Vuex.Store({
       state.keywords = payload
       document.head.querySelector('meta[name=keywords]').content = payload
     }
-  },
-  getters: {}
+  }
 })

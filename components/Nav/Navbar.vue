@@ -36,6 +36,9 @@ export default {
 </script>
 
 <style lang="css" scoped>
+button {
+  color: white;
+}
 a {
   text-decoration: none;
   color: white

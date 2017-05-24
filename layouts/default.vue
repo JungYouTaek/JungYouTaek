@@ -8,7 +8,6 @@
       </v-content>
     </main>
     <Foot/>
-
   </v-app>
 </template>
 

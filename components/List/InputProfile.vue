@@ -2,57 +2,54 @@
   <v-card class="lighten-4 elevation-0">
     <v-card-text>
       <v-container fluid>
-        <v-row>
-          <v-col xs6>
-            <v-subheader v-text="'성별'" />
-          </v-col>
-          <v-col xs6>
+        <v-layout row wrap>
+          <v-flex xs6>
+            <v-subheader>성별</v-subheader>
+          </v-flex>
+          <v-flex xs6>
             <v-select
-            v-bind:items="gender"
-            label="성별"
-            name="gender"
-            light
-            single-line
-            auto
-            />
-          </v-col>
-          <v-col xs6>
-            <v-subheader v-text="'연령대'" />
-          </v-col>
-          <v-col xs6>
+              v-bind:items="gender"
+              label="성별"
+              dark
+              single-line
+              auto
+            ></v-select>
+          </v-flex>
+          <v-flex xs6>
+            <v-subheader>연령대</v-subheader>
+          </v-flex>
+          <v-flex xs6>
             <v-select
-            v-bind:items="age"
-            label="연령대"
-            name="age"
-            light
-            single-line
-            auto
-            />
-          </v-col>
-          <v-col xs6>
-            <v-subheader v-text="'일일 활동량'" />
-          </v-col>
-          <v-col xs6>
+              v-bind:items="age"
+              label="나이"
+              dark
+              single-line
+              auto
+            ></v-select>
+          </v-flex>
+          <v-flex xs6>
+            <v-subheader>일일 활동량</v-subheader>
+          </v-flex>
+          <v-flex xs6>
             <v-select
-            v-bind:items="activity"
-            label="일일 활동량"
-            name="activity"
-            light
-            single-line
-            auto
-            />
-          </v-col>
-          <v-col xs6>
-            <v-subheader v-text="'몸무게'"></v-subheader>
-          </v-col>
-          <v-col xs6>
+              v-bind:items="activity"
+              label="일일 활동량"
+              dark
+              single-line
+              auto
+            ></v-select>
+          </v-flex>
+          <v-flex xs6>
+            <v-subheader>몸무게</v-subheader>
+          </v-flex>
+          <v-flex xs6>
             <v-text-field
-            type="number"
-            name="weight"
-            label="몸무게(숫자만)"
+              name="weight"
+              type="number"
+              label="몸무게"
             ></v-text-field>
-          </v-col>
-        </v-row>
+          </v-flex>
+        </v-layout>
       </v-container>
     </v-card-text>
   </v-card>
